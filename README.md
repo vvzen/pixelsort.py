@@ -1,3 +1,10 @@
+Note by vvzen
+=============
+
+This my personal fork, where I quickly patched some of the code in order to make it Python 3 compatible.
+Here follows the original README:
+
+
 pixelsort
 =========
 

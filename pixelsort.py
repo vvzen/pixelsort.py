@@ -24,7 +24,7 @@ OUTPUT_SUFFIX = "_%03i"
 ANIMATE = False
 SMOOTH = False
 JITTER = 0
-WIDTH = 600
+WIDTH = 1080
 
 
 # PARSE OPTIONS
@@ -206,8 +206,8 @@ def sort_from(im, pix, big_start, big_end):
 
             return
 
-    start = big_start
-    end = big_end
+    start = int(big_start)
+    end = int(big_end)
 
     for x in range(start, end):
         val = pix[x]
@@ -334,8 +334,8 @@ def pix_sort(filename):
 
             putpixel = new_im.putpixel
             to_sort = []
-            start = big_start
-            end = big_end - ((big_end - big_start) / iterations) * (iterations - i)
+            start = int(big_start)
+            end = int(big_end - ((big_end - big_start) / iterations) * (iterations - i))
             remaining = big_end - end
             pixels += end - start
 
@@ -380,9 +380,10 @@ def pix_sort(filename):
 
                 putpixel = new_im.putpixel
                 to_sort = []
-                start = big_start
-                end = big_end - ((big_end - big_start) / iterations) * (
-                    iterations - i - 1
+                start = int(big_start)
+                end = int(
+                    big_end
+                    - ((big_end - big_start) / iterations) * (iterations - i - 1)
                 )
                 pixels += end - start
 
